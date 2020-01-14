@@ -31,7 +31,7 @@ void Player::Update()
 {
 	//	キー入力を更新
 	int key = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-
+	//static int inputFrame = 0;
 	//	移動量をクリア	
 	_velocity = Vector2D(0, 0);
 
@@ -54,6 +54,13 @@ void Player::Update()
 	if (key & PAD_INPUT_LEFT) {
 		_velocity.x -= 2;
 	}
+
+	//キーボードのスペースキーが押されたら
+	if (CheckHitKey(KEY_INPUT_SPACE))
+	{
+		_velocity.y += 5;
+	}
+	
 	_position += _velocity;
 }
 
@@ -62,14 +69,6 @@ void Player::Release()
 {
 }
 
-//void Player::UpdatePosition(bool hitX, bool hitY)
-//{
-//	//	X方向に衝突
-//	if (hitX)
-//		_velocity.x = 0;
-//
-//	//	Y方向に衝突
-//	if (hitY)
-//		_velocity.y = 0;
-//}
+
+
 

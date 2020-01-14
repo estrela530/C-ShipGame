@@ -21,6 +21,9 @@ public:
 	// ‰ð•ú
 	void Release()  override;
 
+	//ƒ{ƒ^ƒ“
+	int OnButton;
+
 	// ‰ð•ú
 	void UpdatePosition(bool hitX, bool hitY);
 
