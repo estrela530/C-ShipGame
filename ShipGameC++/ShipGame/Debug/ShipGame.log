@@ -1,9 +1,4 @@
 ﻿  GamePlay.cpp
-  GraphFactory.cpp
-  Player.cpp
-  SceneManager.cpp
-  Vector2D.cpp
-  WinMain.cpp
+  Title.cpp
   コードを生成中...
-  LINK : 前回のインクリメンタル リンクで C:\C++Ship\ShipGameC++\ShipGame\Debug\ShipGame.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   ShipGame.vcxproj -> C:\C++Ship\ShipGameC++\ShipGame\Debug\ShipGame.exe
