@@ -12,8 +12,12 @@ void GamePlay::Initialize()
 //	更新
 void GamePlay::Update()
 {
+	_player.Update();
+
+	_player.Render();
 	//	ゲーム画面を表示する
 	DrawGraph(0, 0, _gameImage, FALSE);
+
 }
 
 //	解放

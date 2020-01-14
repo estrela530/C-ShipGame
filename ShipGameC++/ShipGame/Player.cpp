@@ -5,10 +5,10 @@
 //	‰Šú‰»ˆ—
 void Player::Start()
 {
-	_grp = GraphFactory::Instance().LoadGraph("img\\blue.png");
-	_size = Vector2D(32, 32);
+	_grp = GraphFactory::Instance().LoadGraph("img\\red.png");
+	_size = Vector2D(50, 50);
 	_radius = 16;
-	_position = Vector2D(40, 40);
+	_position = Vector2D(100, 100);
 	_velocity = Vector2D(0, 0);
 }
 
@@ -50,6 +50,7 @@ void Player::Update()
 	if (key & PAD_INPUT_LEFT) {
 		_velocity.x -= 2;
 	}
+	_position += _velocity;
 }
 
 //	‰ğ•ú
@@ -57,16 +58,14 @@ void Player::Release()
 {
 }
 
-void Player::UpdatePosition(bool hitX, bool hitY)
-{
-	//	X•ûŒü‚ÉÕ“Ë
-	if (hitX)
-		_velocity.x = 0;
-
-	//	Y•ûŒü‚ÉÕ“Ë
-	if (hitY)
-		_velocity.y = 0;
-
-	_position += _velocity;
-}
+//void Player::UpdatePosition(bool hitX, bool hitY)
+//{
+//	//	X•ûŒü‚ÉÕ“Ë
+//	if (hitX)
+//		_velocity.x = 0;
+//
+//	//	Y•ûŒü‚ÉÕ“Ë
+//	if (hitY)
+//		_velocity.y = 0;
+//}
 
