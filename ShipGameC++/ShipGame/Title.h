@@ -9,7 +9,7 @@ public:
 	void Initialize();
 
 	//XV
-	void Updte();
+	void Update();
 
 	//‰ğ•ú
 	void Release();
