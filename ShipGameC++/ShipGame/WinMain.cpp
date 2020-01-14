@@ -26,12 +26,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetBackgroundColor(0, 0, 0);
 
 	// シーンを追加する
-	//SceneManager::Instance().AddScene("Title", new Title);
+	SceneManager::Instance().AddScene("Title", new Title);
 	SceneManager::Instance().AddScene("Game", new GamePlay);
 
 	//	シーン管理クラスで開始シーンを登録
-	//SceneManager::Instance().StartScene("Title");
-	SceneManager::Instance().StartScene("Game");
+	SceneManager::Instance().StartScene("Title");
+	//SceneManager::Instance().StartScene("Game");
 
 	//	実行
 	SceneManager::Instance().Update();
