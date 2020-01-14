@@ -6,6 +6,7 @@ void GamePlay::Initialize()
 {
 	//	ƒQ[ƒ€‰æ–Ê‚Ì”wŒi‰æ‘œ“Ç‚İ‚İ
 	_gameImage = GraphFactory::Instance().LoadGraph("img\\backcolor.png");
+	_player.Start();
 }
 
 //	XV
