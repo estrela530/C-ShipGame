@@ -6,9 +6,9 @@
 void Player::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\red.png");
-	_size = Vector2D(50, 50);
+	_size = Vector2D(64, 64);
 	_radius = 16;
-	_position = Vector2D(100, 100);
+	_position = Vector2D(500, 500);
 	_velocity = Vector2D(0, 0);
 }
 
@@ -16,10 +16,14 @@ void Player::Start()
 void Player::Render()
 {
 	//	プレイヤーを描画
-	DrawRectGraph(static_cast<int>(_position.x),
+	/*DrawRectGraph(static_cast<int>(_position.x),
 		static_cast<int>(_position.y), 0, 64,
 		static_cast<int>(_size.x),
-		static_cast<int>(_size.y), _grp, TRUE);
+		static_cast<int>(_size.y), _grp, TRUE);*/
+
+	LoadGraphScreen(static_cast<int>(_position.x),
+		static_cast<int>(_position.y),
+		"img\\red.png", FALSE);
 }
 
 //	更新
