@@ -24,10 +24,15 @@ public:
 	//	‚»‚ÌŠÖ”“à‚Å‚Ìƒƒ“ƒo•Ï”‚Ì•ÏX‚ğ‹Ö~‚É‚·‚é
 	Vector2D Position() const { return _position; }
 	Vector2D Size() const { return _size; }
+
+	float Rotate() const { return _rotate; }
 	float Radius() const { return _radius; }
+	float Speed() const { return _speed; }
 
 public:
 	Vector2D _position;		//	À•W
 	Vector2D _size;			//	ƒTƒCƒY
 	float _radius;			//	”¼Œa
+	float _rotate;          //  ‰ñ“]
+	float _speed;          //  ‰ñ“]
 };

@@ -1,2 +1,6 @@
 ﻿  Player.cpp
+c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(64): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(70): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
+c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(81): warning C4244: '-=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(82): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
   ShipGame.vcxproj -> C:\Users\K018A1815\Desktop\NanasiC\ShipGameC++\ShipGame\x64\Debug\ShipGame.exe
