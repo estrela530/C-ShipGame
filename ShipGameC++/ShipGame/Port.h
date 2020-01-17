@@ -36,4 +36,5 @@ public:
 	int _grp;
 
 	Vector2D _velocity;
+	Vector2D _position;
 };
