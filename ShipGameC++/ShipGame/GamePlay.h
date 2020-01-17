@@ -1,6 +1,7 @@
 #pragma once
 #include"Scene.h"
 #include"Player.h"
+#include "Port.h"
 
 
 //ゲーム画面シーン
@@ -19,6 +20,9 @@ public:
 private:
 	//プレイヤー
 	Player _player;
+
+	//港
+	Port _port;
 
 	//ゲームプレイの背景
 	int _gameImage;
