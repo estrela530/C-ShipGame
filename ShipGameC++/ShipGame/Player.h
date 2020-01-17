@@ -28,12 +28,24 @@ public:
 	void UpdatePosition(bool hitX, bool hitY);
 
 	//	‘¬“x‚ðŽæ“¾
-	Vector2D Velocity() {
+	Vector2D Velocity()
+	{
 		return _velocity;
 	}
+	Vector2D Angle()
+	{
+		return _angle;
+	}
+	/*Vector2D PlayerPos()
+	{
+		return playerPos;
+	}*/
+	//VECTOR playerPos;
+	
 public:
 	//	‰æ‘œƒnƒ“ƒhƒ‹
 	int _grp;
 
 	Vector2D _velocity;
+	Vector2D _angle;
 };
