@@ -6,7 +6,7 @@
 //	‰Šú‰»ˆ—
 void Player::Start()
 {
-	_grp = GraphFactory::Instance().LoadGraph("img\\red.png");
+	_grp = GraphFactory::Instance().LoadGraph("img\\PlayerShip.png");
 	_size = Vector2D(64, 64);
 	_radius = 16;
 	_position = Vector2D(500, 500);

@@ -6,7 +6,7 @@
 void LargeB::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\fishB.png");
-	_size = Vector2D(600, 128);
+	_size = Vector2D(128, 128);
 	_position = Vector2D(300, 735);
 }
 
@@ -24,7 +24,6 @@ void LargeB::Render()
 		LoadGraphScreen(static_cast<int>(_position.x),
 			static_cast<int>(_position.y),
 			"img\\fishB.png", FALSE);
-
 	}
 }
 
