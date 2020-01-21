@@ -10,13 +10,21 @@ void GamePlay::Initialize()
 	_port.Start();
 	_largeA.Start();
 	_largeB.Start();
+	position = 0;
 }
 
 //	更新
 void GamePlay::Update()
 {
 	//	ゲーム画面を表示する
-	DrawGraph(0, 0, _gameImage, TRUE);
+	DrawGraph(position, 0, _gameImage, FALSE);
+	DrawGraph(position - 1980, 0, _gameImage, FALSE);
+	if (position >= 1980)
+	{
+		position = 0;
+	}
+
+	//DrawExtendGraph(0, 0, 1980, 1280, _gameImage, FALSE);
 
 	//更新
 	_player.Update();
@@ -29,6 +37,8 @@ void GamePlay::Update()
 	_port.Render();
 	_largeA.Render();
 	_largeB.Render();
+
+	position += 10;
 }
 
 //	解放

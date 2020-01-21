@@ -34,4 +34,6 @@ private:
 	//ƒQ[ƒ€ƒvƒŒƒC‚Ì”wŒi
 	int _gameImage;
 
+	int position;
+
 };

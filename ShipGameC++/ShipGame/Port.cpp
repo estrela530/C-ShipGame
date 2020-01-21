@@ -21,7 +21,7 @@ void Port::Render()
 //	XV
 void Port::Update()
 {
-	
+
 }
 
 //	‰ğ•ú
