@@ -45,6 +45,10 @@ public:
 	{
 		return _pos;
 	}
+	VECTOR Vec()
+	{
+		return _vec;
+	}
 	
 public:
 	//	‰æ‘œƒnƒ“ƒhƒ‹
@@ -54,5 +58,6 @@ public:
 	Vector2D _angle;
 	VECTOR playerPos;
 	VECTOR _pos;
+	VECTOR _vec;
 	
 };

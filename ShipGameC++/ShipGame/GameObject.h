@@ -34,6 +34,7 @@ public:
 
 	VECTOR PlayerPos(){ return playerPos; }
 	VECTOR Pos() { return _pos; }
+	VECTOR Vec() { return _vec; }
 
 public:
 	Vector2D _position;		//	ç¿ïW
@@ -41,6 +42,7 @@ public:
 
 	VECTOR playerPos;
 	VECTOR _pos;
+	VECTOR _vec;
 	
 	float _radius;			//	îºåa
 	float _rotate;          //  âÒì]
