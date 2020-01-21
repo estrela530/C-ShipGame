@@ -16,6 +16,10 @@ void Player::Start()
 	_angle = Vector2D(0, 0);
 	_sin = 0;
 	_cos = 0;
+	playerPos.x = 100;
+	playerPos.y = 100;
+	_vec.x = 0;
+	_vec.y = 0;
 	
 }
 
@@ -31,9 +35,13 @@ void Player::Update()
 	_sin = sin(_rotate);
 	_cos = cos(_rotate);
 
-	MoveAngle.x = _velocity.x * _cos - _velocity.y * _sin;
-	MoveAngle.y = _velocity.x * _sin + _velocity.y * _cos;
+	MoveAngle.x = _vec.x * _cos - _vec.y * _sin;
+	MoveAngle.y = _vec.x * _sin + _vec.y * _cos;
 
+	/*MoveAngle.x = _velocity.x * _cos - _velocity.y * _sin;
+	MoveAngle.y = _velocity.x * _sin + _velocity.y * _cos;*/
+
+	
 	playerPos = VGet(playerPos.x, playerPos.y, 0);
 	//	移動量をクリア	
 	_velocity = Vector2D(0, 0);
@@ -54,12 +62,26 @@ void Player::Update()
 	//スペースキーが押されたら前進
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
-		_velocity.y -= 2;
-		//playerPos.y += 2;
+		//_velocity.y -= 2;
+		_vec.x += 0.2;
+		if (_vec.x >= 4)
+		{
+			_vec.x = 4;
+		}
 	}
-	 playerPos = VAdd(playerPos,MoveAngle);
-	 _pos = playerPos;
-	_position += _velocity;
+	else if(CheckHitKey(KEY_INPUT_SPACE)== FALSE)
+	{
+		_vec.x -= 0.1 ;
+		if (_vec.x <= 0)
+		{
+			_vec.x = 0;
+		}
+	}
+
+
+	playerPos = VAdd(playerPos, MoveAngle);
+	_pos = playerPos;
+	//_position += _velocity;
 }
 
 //	解放
@@ -82,7 +104,7 @@ void Player::Render()
 		"img\\red.png", FALSE);*/
 
 	//途中
-	/*DrawRotaGraph
+	DrawRotaGraph
 	(
 		static_cast<int>(_pos.x),
 		static_cast<int>(_pos.y),
@@ -91,10 +113,10 @@ void Player::Render()
 		_grp,
 		FALSE,
 		FALSE
-	);*/
+	);
 
 	
-	DrawRotaGraph
+	/*DrawRotaGraph
 	(
 		static_cast<int>(_position.x),
 		static_cast<int>(_position.y),
@@ -103,7 +125,7 @@ void Player::Render()
 		_grp,
 		FALSE,
 		FALSE
-	);
+	);*/
 }
 
 
