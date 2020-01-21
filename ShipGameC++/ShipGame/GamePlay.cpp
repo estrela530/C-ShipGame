@@ -5,7 +5,7 @@
 void GamePlay::Initialize()
 {
 	//	ƒQ[ƒ€‰æ–Ê‚Ì”wŒi‰æ‘œ“Ç‚İ‚İ
-	_gameImage = GraphFactory::Instance().LoadGraph("img\\backcolor.png");
+	_gameImage = GraphFactory::Instance().LoadGraph("img\\Sea.png");
 	_player.Start();
 	_port.Start();
 	_largeA.Start();
@@ -34,5 +34,5 @@ void GamePlay::Update()
 //	‰ğ•ú
 void GamePlay::Release()
 {
-	GraphFactory::Instance().EraseGraph("img\\backcolor.png");
+	GraphFactory::Instance().EraseGraph("img\\Sea.png");
 }
