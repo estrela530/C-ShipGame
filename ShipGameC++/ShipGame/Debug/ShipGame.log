@@ -1,5 +1,6 @@
-﻿  MiddleA.cpp
-  SmallA.cpp
-  Special.cpp
-  コードを生成中...
-  ShipGame.vcxproj -> C:\C++Ship\ShipGameC++\ShipGame\Debug\ShipGame.exe
+﻿  LargeA.cpp
+WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Start(void)" (?Start@LargeB@@UAEXXZ)" は未解決です。
+WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Render(void)" (?Render@LargeB@@UAEXXZ)" は未解決です。
+WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Update(void)" (?Update@LargeB@@UAEXXZ)" は未解決です。
+WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Release(void)" (?Release@LargeB@@UAEXXZ)" は未解決です。
+C:\C++Ship\ShipGameC++\ShipGame\Debug\ShipGame.exe : fatal error LNK1120: 4 件の未解決の外部参照

@@ -25,7 +25,6 @@ void LargeA::Render()
 		LoadGraphScreen(static_cast<int>(_position.x),
 			static_cast<int>(_position.y),
 			"img\\fishA.png", TRUE);
-
 	}
 
 }
