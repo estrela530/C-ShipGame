@@ -14,6 +14,8 @@ void Player::Start()
 	_rotate = 0;
 	_speed = 2;
 	_angle = Vector2D(0, 0);
+	_sin = 0;
+	_cos = 0;
 	
 }
 
@@ -24,16 +26,15 @@ void Player::Update()
 	//	キー入力を更新
 	int key = GetJoypadInputState(DX_INPUT_KEY_PAD1);
 	//static int inputFrame = 0;
-	VECTOR a;
-	VECTOR speed1;
-	// playerPos;
+	VECTOR MoveAngle;
+	//VECTOR speed1;
 	_sin = sin(_rotate);
 	_cos = cos(_rotate);
-	//playerPos = VGet(playerPos.x, playerPos.y, 0);
 
-	a.x = _velocity.x*_cos - _velocity.y * _sin;
-	a.y = _velocity.x*_sin + _velocity.y * _cos;
+	MoveAngle.x = _velocity.x * _cos - _velocity.y * _sin;
+	MoveAngle.y = _velocity.x * _sin + _velocity.y * _cos;
 
+	playerPos = VGet(playerPos.x, playerPos.y, 0);
 	//	移動量をクリア	
 	_velocity = Vector2D(0, 0);
 	
@@ -53,20 +54,11 @@ void Player::Update()
 	//スペースキーが押されたら前進
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
-		//playerPos += speed1;
-		if (key & PAD_INPUT_RIGHT)
-		{
-			_velocity.x += 2;
-			
-		}
-		if (key & PAD_INPUT_LEFT)
-		{
-			_velocity.x -= 2;
-		}
-		_velocity.y -= 2;
-	
+		//_velocity.y -= 2;
+		playerPos.y += 2;
 	}
-	 //playerPos = VAdd(playerPos,a);
+	 playerPos = VAdd(playerPos,MoveAngle);
+	 _pos = playerPos;
 	_position += _velocity;
 }
 
@@ -90,18 +82,18 @@ void Player::Render()
 		"img\\red.png", FALSE);*/
 
 	//途中
-	/*DrawRotaGraph
+	DrawRotaGraph
 	(
-		static_cast<int>(playerPos.x),
-		static_cast<int>(playerPos.y),
+		static_cast<int>(_pos.x),
+		static_cast<int>(_pos.y),
 		1,
 		_rotate,
 		_grp,
 		FALSE,
 		FALSE
-	);*/
+	);
 
-	DrawRotaGraph
+	/*DrawRotaGraph
 	(
 		static_cast<int>(_position.x),
 		static_cast<int>(_position.y),
@@ -110,7 +102,7 @@ void Player::Render()
 		_grp,
 		FALSE,
 		FALSE
-	);
+	);*/
 }
 
 

@@ -36,11 +36,15 @@ public:
 	{
 		return _angle;
 	}
-	/*Vector2D PlayerPos()
+
+	VECTOR PlayerPos()
 	{
 		return playerPos;
-	}*/
-	//VECTOR playerPos;
+	}
+	VECTOR Pos()
+	{
+		return _pos;
+	}
 	
 public:
 	//	‰æ‘œƒnƒ“ƒhƒ‹
@@ -48,4 +52,7 @@ public:
 
 	Vector2D _velocity;
 	Vector2D _angle;
+	VECTOR playerPos;
+	VECTOR _pos;
+	
 };

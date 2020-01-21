@@ -1,5 +1,4 @@
 ﻿  Player.cpp
 c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(44): warning C4305: '+=': 'double' から 'float' へ切り詰めます。
 c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(50): warning C4305: '-=': 'double' から 'float' へ切り詰めます。
-c:\users\k018a1815\desktop\nanasic\shipgamec++\shipgame\player.cpp(28): warning C4101: 'speed1': ローカル変数は 1 度も使われていません。
   ShipGame.vcxproj -> C:\Users\K018A1815\Desktop\NanasiC\ShipGameC++\ShipGame\x64\Debug\ShipGame.exe
