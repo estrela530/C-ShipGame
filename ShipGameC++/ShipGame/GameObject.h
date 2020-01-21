@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2D.h"
+#include "DxLib.h"
 
 //	ゲームオブジェクトクラス
 class GameObject
@@ -30,10 +31,16 @@ public:
 	float Sin() const { return _sin; }
 	float Cos() const { return _cos; }
 	float Speed() const { return _speed; }
-	//VECTOR playerPos;
+
+	VECTOR PlayerPos(){ return playerPos; }
+	VECTOR Pos() { return _pos; }
+
 public:
 	Vector2D _position;		//	座標
 	Vector2D _size;			//	サイズ
+
+	VECTOR playerPos;
+	VECTOR _pos;
 	
 	float _radius;			//	半径
 	float _rotate;          //  回転
