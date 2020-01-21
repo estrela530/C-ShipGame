@@ -1,5 +1,4 @@
-﻿  LargeA.cpp
-WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Start(void)" (?Start@LargeB@@UAEXXZ)" は未解決です。
+﻿WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Start(void)" (?Start@LargeB@@UAEXXZ)" は未解決です。
 WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Render(void)" (?Render@LargeB@@UAEXXZ)" は未解決です。
 WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Update(void)" (?Update@LargeB@@UAEXXZ)" は未解決です。
 WinMain.obj : error LNK2001: 外部シンボル ""public: virtual void __thiscall LargeB::Release(void)" (?Release@LargeB@@UAEXXZ)" は未解決です。
