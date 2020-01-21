@@ -5,22 +5,32 @@
 //	èâä˙âªèàóù
 void SmallA::Start()
 {
-	_grp = GraphFactory::Instance().LoadGraph("img\\minato.png");
-	_size = Vector2D(600, 128);
-	_position = Vector2D(500, 735);
+	_grp = GraphFactory::Instance().LoadGraph("img\\fishC.png");
+	_size = Vector2D(128, 128);
+	_position = Vector2D(300, 735);
 }
 
 //	ï`âÊ
 void SmallA::Render()
 {
-	LoadGraphScreen(static_cast<int>(_position.x),
-		static_cast<int>(_position.y),
-		"img\\minato.png", FALSE);
+	if (_position.x < 500)
+	{
+		LoadGraphScreen(static_cast<int>(_position.x),
+			static_cast<int>(_position.y),
+			"img\\silhouette.png", TRUE);
+	}
+	else if (_position.x >= 500)
+	{
+		LoadGraphScreen(static_cast<int>(_position.x),
+			static_cast<int>(_position.y),
+			"img\\fishC.png", TRUE);
+	}
 }
 
 //	çXêV
 void SmallA::Update()
 {
+	_position.x += 2;
 
 }
 

@@ -108,10 +108,10 @@ void Player::Render()
 	(
 		static_cast<int>(_pos.x),
 		static_cast<int>(_pos.y),
-		1,
+		0.5,
 		_rotate,
 		_grp,
-		FALSE,
+		TRUE,
 		FALSE
 	);
 
