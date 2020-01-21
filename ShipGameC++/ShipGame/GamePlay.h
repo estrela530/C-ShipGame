@@ -1,8 +1,9 @@
 #pragma once
-#include"Scene.h"
-#include"Player.h"
+#include "Scene.h"
+#include "Player.h"
 #include "Port.h"
-
+#include "LargeA.h"
+#include "LargeB.h"
 
 //ƒQ[ƒ€‰æ–ÊƒV[ƒ“
 class GamePlay :public Scene
@@ -23,6 +24,12 @@ private:
 
 	//`
 	Port _port;
+
+	//‹›A
+	LargeA _largeA;
+
+	//‹›B
+	LargeB _largeB;
 
 	//ƒQ[ƒ€ƒvƒŒƒC‚Ì”wŒi
 	int _gameImage;

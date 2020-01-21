@@ -6,9 +6,6 @@
 void Port::Start()
 {
 	_grp = GraphFactory::Instance().LoadGraph("img\\minato.png");
-	_size = Vector2D(412, 128);
-	_position = Vector2D(500, 735);
-
 	_size = Vector2D(600, 128);
 	_position = Vector2D(500, 735);
 }
