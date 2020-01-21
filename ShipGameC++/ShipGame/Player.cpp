@@ -54,8 +54,8 @@ void Player::Update()
 	//スペースキーが押されたら前進
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
-		//_velocity.y -= 2;
-		playerPos.y += 2;
+		_velocity.y -= 2;
+		//playerPos.y += 2;
 	}
 	 playerPos = VAdd(playerPos,MoveAngle);
 	 _pos = playerPos;
@@ -82,7 +82,7 @@ void Player::Render()
 		"img\\red.png", FALSE);*/
 
 	//途中
-	DrawRotaGraph
+	/*DrawRotaGraph
 	(
 		static_cast<int>(_pos.x),
 		static_cast<int>(_pos.y),
@@ -91,9 +91,10 @@ void Player::Render()
 		_grp,
 		FALSE,
 		FALSE
-	);
+	);*/
 
-	/*DrawRotaGraph
+	
+	DrawRotaGraph
 	(
 		static_cast<int>(_position.x),
 		static_cast<int>(_position.y),
@@ -102,7 +103,7 @@ void Player::Render()
 		_grp,
 		FALSE,
 		FALSE
-	);*/
+	);
 }
 
 
